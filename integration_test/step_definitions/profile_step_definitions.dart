@@ -29,6 +29,7 @@ abstract class ProfileStepDefinitions {
             await tester.pump();
           },
         ),
+
     when1<String, FlutterWidgetTesterWorld>(
       RegExp(r'Я указываю имя {string}$'),
           (name, context) async {
