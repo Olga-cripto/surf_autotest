@@ -8,6 +8,7 @@ import 'step_definitions/interests_step_definitions.dart';
 import 'step_definitions/main_step_definitions.dart';
 import 'step_definitions/place_step_definitions.dart';
 import 'step_definitions/profile_step_definitions.dart';
+import 'step_definitions/aboutme_step_definitions.dart';
 
 part 'gherkin_suite_test.g.dart';
 
@@ -35,6 +36,7 @@ void main() {
         ...ProfileStepDefinitions.steps,
         ...PlaceStepDefinitions.steps,
         ...InterestsStepDefinitions.steps,
+        ...AboutmeStepDefinitions.steps,
       ],
     ),
     appMainFunction: (world) => app.run(),

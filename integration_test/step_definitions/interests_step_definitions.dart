@@ -10,7 +10,7 @@ abstract class InterestsStepDefinitions {
 
 
     when<FlutterWidgetTesterWorld>(
-      RegExp(r' И Я выбираю "Photo" из интересов$'),
+      RegExp(r' И Я выбираю {string}$ из интересов$'),
           (context) async {
         final tester = context.world.rawAppDriver;
         await tester.tap(InterestsTestScreen.checkbox);
