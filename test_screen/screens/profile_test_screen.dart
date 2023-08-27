@@ -17,7 +17,7 @@ abstract class ProfileTestScreen {
   /// поле SecondName на экране персональных данных
   static Finder secondnameField = GeneralTestScreen.textField('SecondName');
 
-  /// кнопка редактирования перехода далее на профайл экране
+  /// кнопка nextBtn на экране персоналъьных данных
   static Finder nextBtn =
   find.widgetWithIcon(ElevatedButton, Icons.navigate_next);
 }
