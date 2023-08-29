@@ -8,13 +8,14 @@ import '../../test_screen/screens/interests_test_screen.dart';
 abstract class InterestsStepDefinitions {
   static Iterable<StepDefinitionGeneric> get steps => [
 
-    when<FlutterWidgetTesterWorld>(
-      RegExp(r' И Я выбираю {string}$ из интересов$'),
-          (context) async {
+    when1<String, FlutterWidgetTesterWorld>(
+      RegExp(r'Я выбираю {string} из интересов$'),
+          (interests, context) async {
         final tester = context.world.rawAppDriver;
-        await tester.tap(InterestsTestScreen.checkbox);
         await tester.pumpAndSettle();
-          },
+        await tester.tap(InterestsTestScreen.checkbox);
+        await tester.pump();
+      },
     ),
 
     when<FlutterWidgetTesterWorld>(

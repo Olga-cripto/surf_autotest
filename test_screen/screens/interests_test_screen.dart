@@ -12,7 +12,7 @@ abstract class InterestsTestScreen {
   static Finder row =
   find.ancestor(of: text, matching: find.byType(Row));
   static Finder checkbox = 
-  find.descendant(of: row, matching: find.byType(Checkbox));
+  find.descendant(of: row, matching: find.descendant(of: find.byType(StateNotifierBuilder), matching: find.byType(Checkbox)));
 
   /// кнопка nextBtn на экране места жительства
   static Finder nextBtn =
