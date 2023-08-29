@@ -13,7 +13,7 @@ abstract class InterestsStepDefinitions {
           (interests, context) async {
         final tester = context.world.rawAppDriver;
         await tester.pumpAndSettle();
-        await tester.tap(InterestsTestScreen.checkbox);
+        await tester.tap (InterestsTestScreen.checkbox);
         await tester.pump();
       },
     ),

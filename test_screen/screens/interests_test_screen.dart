@@ -6,15 +6,18 @@ import 'package:profile/features/profile/widgets/next_button.dart';
 import 'general_test_screen.dart';
 
 abstract class InterestsTestScreen {
-  /// чекбокс Photo
+  /// чекбокс Photo на экране интересов
   static Finder text =
   find.widgetWithText(Text, 'Photo');
   static Finder row =
   find.ancestor(of: text, matching: find.byType(Row));
   static Finder checkbox = 
-  find.descendant(of: row, matching: find.descendant(of: find.byType(StateNotifierBuilder), matching: find.byType(Checkbox)));
+  find.descendant(of: row, matching: find.byType(Checkbox),
+    matchRoot: false,
+    skipOffstage: true,
+  );
 
-  /// кнопка nextBtn на экране места жительства
+  /// кнопка nextBtn на экране интересов
   static Finder nextBtn =
   find.widgetWithIcon(ElevatedButton, Icons.navigate_next);
 }
