@@ -22,6 +22,7 @@ abstract class AboutmeStepDefinitions {
           (context) async {
         final tester = context.world.rawAppDriver;
         await tester.tap(AboutmeTestScreen.saveBtn);
+        await tester.pumpAndSettle();
       },
     ),
 

@@ -11,5 +11,13 @@ abstract class MainStepDefinitions {
             await tester.tap(MainTestScreen.editProfileBtn);
           },
         ),
+    when<FlutterWidgetTesterWorld>(
+      RegExp(r'Я перехожу к редактированию профиля снова$'),
+          (context) async {
+        final tester = context.world.rawAppDriver;
+        await tester.tap(MainTestScreen.editProfileBtn);
+      },
+    ),
+
       ];
 }

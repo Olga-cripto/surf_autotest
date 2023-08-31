@@ -47,7 +47,7 @@ abstract class ProfileStepDefinitions {
         final tester = context.world.rawAppDriver;
         await tester.pumpAndSettle();
         await tester.tap(ProfileTestScreen.secondnameField);
-        await tester.pump();
+        await tester.pumpAndSettle();
       },
     ),
 
@@ -58,6 +58,7 @@ abstract class ProfileStepDefinitions {
         await tester.tap(ProfileTestScreen.nextBtn);
       },
     ),
+
 
   ];
   }
