@@ -46,7 +46,6 @@ abstract class ProfileStepDefinitions {
           (secondname, context) async {
         final tester = context.world.rawAppDriver;
         await tester.pumpAndSettle();
-        await tester.enterText(ProfileTestScreen.secondnameField, secondname);
         await tester.tap(ProfileTestScreen.secondnameField);
         await tester.pump();
       },

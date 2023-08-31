@@ -8,7 +8,7 @@ abstract class AboutmeTestScreen {
   /// поле о себе на экране About me
   static Finder aboutmeField = GeneralTestScreen.textField('Write a few words about yourself');
 
-  /// кнопка сохранениня на экране About me
+  /// кнопка сохранения на экране About me
   static Finder saveBtn =
   find.widgetWithText(ElevatedButton, 'Save');
 }

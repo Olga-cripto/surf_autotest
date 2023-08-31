@@ -10,7 +10,7 @@ abstract class InterestsStepDefinitions {
 
     when1<String, FlutterWidgetTesterWorld>(
       RegExp(r'Я выбираю {string} из интересов$'),
-          (interests, context) async {
+          (String interests, context) async {
         final tester = context.world.rawAppDriver;
         await tester.pumpAndSettle();
         await tester.tap (InterestsTestScreen.checkbox);

@@ -7,15 +7,7 @@ import 'general_test_screen.dart';
 
 abstract class InterestsTestScreen {
   /// чекбокс Photo на экране интересов
-  static Finder text =
-  find.widgetWithText(Text, 'Photo');
-  static Finder row =
-  find.ancestor(of: text, matching: find.byType(Row));
-  static Finder checkbox = 
-  find.descendant(of: row, matching: find.byType(Checkbox),
-    matchRoot: false,
-    skipOffstage: true,
-  );
+  static Finder checkbox = find.descendant(of: find.ancestor(of: find.text('Photo'), matching: find.byType(Row)), matching: find.byType(Checkbox),);
 
   /// кнопка nextBtn на экране интересов
   static Finder nextBtn =

@@ -18,7 +18,7 @@ abstract class AboutmeStepDefinitions {
           },
         ),
     when<FlutterWidgetTesterWorld>(
-      RegExp(r'Я перехожу далее$'),
+      RegExp(r'Я сохраняю$'),
           (context) async {
         final tester = context.world.rawAppDriver;
         await tester.tap(AboutmeTestScreen.saveBtn);
